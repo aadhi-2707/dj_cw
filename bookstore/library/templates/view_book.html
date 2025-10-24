@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Books</title>
+</head>
+<body>
+    <h2>All Books</h2>
+    {% if books %}
+        <ul>
+        {% for book in books %}
+            <li>{{ book.title }} by {{ book.author }}</li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No books found.</p>
+    {% endif %}
+    <br>
+    <a href="{% url 'add_book' %}">Add Another Book</a>
+</body>
+</html>

@@ -8,7 +8,7 @@ def login_view(request):
         form = LoginForm(request.POST)
         if form.is_valid():
             email = form.cleaned_data['email']
-            message = "Thank you for logging in!"
+            message = "Thank you for logging in..."
             return render(request, 'thankyou.html', {'email': email, 'message': message})
     else:
         form = LoginForm()
